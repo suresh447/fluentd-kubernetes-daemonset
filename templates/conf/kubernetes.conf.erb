@@ -11,9 +11,9 @@
 <source>
   @type tail
   @id in_tail_container_logs
-  path /var/log/containers/*.log
-  pos_file /var/log/fluentd-containers.log.pos
-  tag kubernetes.*
+  path /var/log/containers/error_log
+  pos_file /var/log/fluentd-containers.error.pos
+  tag kubernetes.containers.error.pos
   read_from_head true
 <% if is_v1 %>
   <parse>
